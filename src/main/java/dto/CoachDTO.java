@@ -6,8 +6,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CoachDTO implements Serializable {
-    private static final long serialVersionUID = 1L;
+public class CoachDTO {
+
 
     private Long id;
     private String name;

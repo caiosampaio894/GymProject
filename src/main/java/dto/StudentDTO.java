@@ -8,8 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-public class StudentDTO implements Serializable {
-    private static final long serialVersionUID = 1L;
+public class StudentDTO {
 
     private Long id;
     private String name;
@@ -64,10 +63,6 @@ public class StudentDTO implements Serializable {
 
     public void setAge(int age) {
         this.age = age;
-    }
-
-    public static long getSerialversionuid() {
-        return serialVersionUID;
     }
 
     public double getWeight() {

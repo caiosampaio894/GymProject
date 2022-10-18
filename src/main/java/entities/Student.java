@@ -1,8 +1,11 @@
 package entities;
 
+import dto.GymClassDTO;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
@@ -78,6 +81,14 @@ public class Student  {
         this.height = height;
     }
 
+    public Set<GymClass> getGymClass() {
+        return gymClass;
+    }
+
+    public void setGymClass(Set<GymClass> gymClass) {
+        this.gymClass = gymClass;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
@@ -106,4 +117,6 @@ public class Student  {
         Student other = (Student) obj;
         return Objects.equals(id, other.id);
     }
+
+
 }

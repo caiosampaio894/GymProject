@@ -10,14 +10,14 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
-public class GymClassDTO implements Serializable {
-    private static final long serialVersionUID = 1L;
+public class GymClassDTO {
+
 
     private Long id;
     private String name;
     private String type;
     private String room;
-    private List<List<String>> days = new ArrayList<>();
+    private List<String> days = new ArrayList<>();
     private String time;
 
     private List<StudentDTO> students = new ArrayList<>();
@@ -27,7 +27,7 @@ public class GymClassDTO implements Serializable {
     public GymClassDTO() {
     }
 
-    public GymClassDTO(Long id, String name, String type, String room, List<List<String>> days, String time) {
+    public GymClassDTO(Long id, String name, String type, String room, List<String> days, String time) {
         this.id = id;
         this.name = name;
         this.type = type;
@@ -42,7 +42,7 @@ public class GymClassDTO implements Serializable {
         this.type = entity.getType();
         this.room = entity.getRoom();
         this.time = entity.getTime();
-        this.days = Arrays.asList(entity.getDays());
+        this.days = entity.getDays();
     }
 
     public GymClassDTO(GymClass entity, Set<Student> students) {
@@ -59,11 +59,11 @@ public class GymClassDTO implements Serializable {
         this.id = id;
     }
 
-    public List<List<String>> getDays() {
+    public List<String> getDays() {
         return days;
     }
 
-    public void setDays(List<List<String>> days) {
+    public void setDays(List<String> days) {
         this.days = days;
     }
 
